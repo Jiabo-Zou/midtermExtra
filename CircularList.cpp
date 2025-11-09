@@ -19,7 +19,7 @@ CircularList::CircularList(int size) {
         return;
     }
 
-    // build a ring of `size` nodes, initialized to 0
+    // build a ring of  nodes, initialize all nodes with data = 0
     head = new Node(0);
     Node* pre = head;
     for (int i = 1; i < size; ++i) {
