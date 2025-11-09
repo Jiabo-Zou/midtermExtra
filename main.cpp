@@ -20,17 +20,12 @@ int main() {
 
     // --- Move head counterclockwise once ---
     int newHead = clist.moveHeadCounterclockwise();
-    std::cout << "After 1 counterclockwise move (new head = " << newHead << "): ";
+    std::cout << "After 1  move (new head = " << newHead << "): ";
     clist.print();
 
     // --- Move head counterclockwise again ---
     newHead = clist.moveHeadCounterclockwise();
-    std::cout << "After 2 counterclockwise moves (new head = " << newHead << "): ";
-    clist.print();
-
-    // --- Move head counterclockwise one more time ---
-    newHead = clist.moveHeadCounterclockwise();
-    std::cout << "After 3 counterclockwise moves (new head = " << newHead << "): ";
+    std::cout << "After 2  moves (new head = " << newHead << "): ";
     clist.print();
 
     return 0;
