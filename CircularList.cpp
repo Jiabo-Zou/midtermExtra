@@ -47,12 +47,12 @@ int CircularList::moveHeadCounterclockwise() {
     if (size <= 0 || head == nullptr) return -1;
 
     Node* pre = head;
-    for (int i = 0; i < size - 1; ++i) {
+    for (int i = 0; i < size - 1; ++i) { //size-1 means end before the head
         pre = pre->next;
     }
 
-    head = pre;
-    return head->data;
+    head = pre; // move head to the previous 1 which is the last in the circle
+    return head->data; //return the new haed whcih shuld be the first 1 count counterclockwise.
 } 
  
 bool CircularList::setElements(int* elements, int elementsSize) { 
