@@ -25,7 +25,7 @@ CircularList::CircularList(int size) {
     for (int i = 1; i < size; ++i) {
         Node* current = new Node(0);
         pre->next = current;
-        pre = current;
+        pre = current; //connect the last to the first
     }
     // close the circle
     pre->next = head;
