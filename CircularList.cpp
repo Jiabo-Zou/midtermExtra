@@ -12,26 +12,7 @@ void Node::print() {
  
 CircularList::CircularList(int size) { 
     // TO BE IMPLEMENTED 
- this->size = size;
 
-    if (size <= 0) {
-        head = nullptr;
-        return;
-    }
-
-    // Create the first node
-    head = new Node(0);
-    Node* prev = head;
-
-    // Create the remaining nodes
-    for (int i = 1; i < size; i++) {
-        Node* newNode = new Node(0);
-        prev->next = newNode;
-        prev = newNode;
-    }
-
-    // Make it circular
-    prev->next = head;
 } 
  
 CircularList::~CircularList() { 
@@ -45,19 +26,7 @@ CircularList::~CircularList() {
  
 int CircularList::moveHeadCounterclockwise() { 
     // TO BE IMPLEMENTED 
-  if (size <= 0 || head == nullptr)
-        return -1;  // error or empty list
 
-    // Find the node before head
-    Node* temp = head;
-    for (int i = 0; i < size - 1; i++) {
-        temp = temp->next;
-    }
-
-    // Move head one node backward (counterclockwise)
-    head = temp;
-
-    return head->data;
 } 
  
 bool CircularList::setElements(int* elements, int elementsSize) { 
