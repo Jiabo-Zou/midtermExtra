@@ -19,16 +19,16 @@ CircularList::CircularList(int size) {
         return;
     }
 
-    // build a ring of `size` nodes, all initialized to 0
+    // build a ring of `size` nodes, initialized to 0
     head = new Node(0);
-    Node* prev = head;
+    Node* pre = head;
     for (int i = 1; i < size; ++i) {
-        Node* cur = new Node(0);
-        prev->next = cur;
-        prev = cur;
+        Node* current = new Node(0);
+        pre->next = current;
+        pre = current;
     }
     // close the circle
-    prev->next = head;
+    pre->next = head;
 
 } 
  
@@ -43,16 +43,15 @@ CircularList::~CircularList() {
  
 int CircularList::moveHeadCounterclockwise() { 
     // TO BE IMPLEMENTED 
- // move head to the node BEFORE current head, return new head's data
+
     if (size <= 0 || head == nullptr) return -1;
 
-    // find the predecessor of head (singly linked → walk size-1 steps)
-    Node* prev = head;
+    Node* pre = head;
     for (int i = 0; i < size - 1; ++i) {
-        prev = prev->next;
+        pre = pre->next;
     }
 
-    head = prev;
+    head = pre;
     return head->data;
 } 
  
