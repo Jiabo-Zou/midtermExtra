@@ -51,7 +51,7 @@ int CircularList::moveHeadCounterclockwise() {
         pre = pre->next;
     }
 
-    head = pre; // move head to the previous 1 which is the last in the circle
+   // move head to the previous 1 which is the last in the circle
     return head->data; //return the new haed whcih shuld be the first 1 count counterclockwise.
 } 
  
