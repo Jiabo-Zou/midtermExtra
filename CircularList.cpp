@@ -25,10 +25,10 @@ CircularList::CircularList(int size) {
     for (int i = 1; i < size; ++i) {
         Node* current = new Node(0);
         pre->next = current;
-        pre = current; //connect the last to the first
+        pre = current; //update the previous
     }
-    // close the circle
-    pre->next = head;
+   
+    pre->next = head;// close the circle by connect the last to the first
 
 } 
  
